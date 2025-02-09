@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Tektur:wght@400..900&display=swap');
+
+@media (max-width: 800px) {
+    .content {
+        max-width: 100%; /* Полная ширина на маленьких экранах */
+        padding: 10px; /* Уменьшаем отступы */
+    }
+}
+
+
+
+body {
+    font-family: "Tektur", serif;    
+    margin: 0;
+    padding: 0;
+    height: 100vh;    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f9f9f9;
+}
+
+/* Основной контент */
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.smallFont {
+    color: #989797;
+    font-size: 10px;
+    padding-bottom: 10px;
+}
+
+.hightlight {
+    color: #ba1515;
+    font-weight: 600;         
+}
+
+.navbar {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+}
+
+.navbar a {
+    color: white;
+    padding: 12px 20px;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.navbar a:hover {
+    background-color: #45a049;
+}
+
+/* Секция с задачами */
+.content {
+    flex: 1;
+    overflow-y: auto;
+    max-width: 800px;
+    margin-top: 20px;
+    margin-bottom: 20px;            
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.titleBlock {
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 5px;
+    font-size: 10px;
+    padding: 3px; 
+    margin: 0px 5px 5px 0px;         
+}
+.task {
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.task h3 {
+    margin: 0 0 10px 0;
+}
+
+.task p {
+    margin-top: 0;
+}
+
+.taskContainer {
+    display: flex;
+}
+
+.img {
+    margin-right: 10px;
+    width: 210px;
+    height: 150px;
+    background-size: cover;
+    border-radius: 5px;
+    border: solid 1px #ddd;
+    flex-shrink: 0;
+}
+
+.task1Pic {
+    background-image: url("../img/marshmellou.png");
+    background-position: -40px;
+}
+
+.task2Pic {
+    background-image: url("../img/luna.webp");
+    background-position: -3px;
+}
+
+.task3Pic {
+    background-image: url("../img/rocket.jpg");
+    background-position: 0 -30px;    
+}
+
+.task4Pic {
+    background-image: url("../img/ship.jpg");
+    background-size: 180%;
+    background-position: -85px;
+
+}
+
+.task5Pic {
+    background-image: url("../img/1551289709_Orbit.gif");
+    background-position: 0 -30px;
+}
+
+.task6Pic {
+    background-image: url("../img/crew2.png");
+    height: 370px;
+    background-size: cover; 
+}
+
+.task7Pic {
+    background-image: url("../img/1551289709_Orbit.gif");
+    background-position: 0 -30px;
+}
+
+.task8Pic {
+    background-image: url("../img/1551289709_Orbit.gif");
+    background-position: 0 -30px;
+}
+
+.task9Pic {
+    background-image: url("../img/1551289709_Orbit.gif");
+    background-position: 0 -30px;
+}
+
+.task10Pic {
+    background-image: url("../img/1551289709_Orbit.gif");
+    background-position: 0 -30px;
+}
+
+.task11Pic {
+    background-image: url("../img/1551289709_Orbit.gif");
+    background-position: 0 -30px;
+}
+
+.task12Pic {
+    background-image: url("../img/1551289709_Orbit.gif");
+    background-position: 0 -30px;
+}
+
+.task13Pic {
+    background-image: url("../img/1551289709_Orbit.gif");
+    background-position: 0 -30px;
+}
+
+.task14Pic {
+    background-image: url("../img/1551289709_Orbit.gif");
+    background-position: 0 -30px;
+}
+
+.task15Pic {
+    background-image: url("../img/1551289709_Orbit.gif");
+    background-position: 0 -30px;
+}
+
+header {
+    width: 100%;           
+}
+
+footer {
+    width: 100%;
+    background-color: #4CAF50;
+    text-align: center;
+    color: white;
+    padding: 10px 0;
+}
