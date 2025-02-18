@@ -201,6 +201,14 @@ code {
     background-repeat: no-repeat;
 }
 
+.task3_3Pic {
+    height: 270px;
+    background-image: url("../img/spaceship_light.gif");
+    background-size: 230%;
+    background-position: -125px;
+    background-repeat: no-repeat;
+}
+
 .segments {
     height: 400px;
     width: 100%;
