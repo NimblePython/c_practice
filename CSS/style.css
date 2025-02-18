@@ -7,8 +7,6 @@
     }
 }
 
-
-
 body {
     font-family: "Tektur", serif;    
     margin: 0;
@@ -32,6 +30,12 @@ main {
     color: #989797;
     font-size: 10px;
     padding-bottom: 10px;
+}
+
+code {
+    color: #ba1515;
+    font-weight: 600;
+    font-size: 14px;
 }
 
 .hightlight {
@@ -80,6 +84,7 @@ main {
     padding: 3px; 
     margin: 0px 5px 5px 0px;         
 }
+
 .task {
     margin-bottom: 20px;
     padding: 15px;
@@ -189,6 +194,28 @@ main {
     background-position: 0 -30px;
 }
 
+.task1_3Pic {
+    height: 270px;
+    background-image: url("../img/elf_sections.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.segments {
+    height: 400px;
+    width: 100%;
+    background-image: url("../img/elf_segments.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.task2_3Pic {
+    height: 450px;
+    background-image: url("../img/elf_segments.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
 header {
     width: 100%;           
 }
@@ -199,4 +226,12 @@ footer {
     text-align: center;
     color: white;
     padding: 10px 0;
+}
+
+/* Скрываем все секции, кроме первой */
+.content {
+    display: none;
+}
+.content.active {
+    display: block;
 }

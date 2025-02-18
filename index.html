@@ -10,9 +10,9 @@
     <header>
         <!-- Верхняя панель меню -->
         <div class="navbar">
-            <a href="#">Практика 1</a>
-            <a href="#">Практика 2</a>
-            <a href="#">Практика 3</a>
+            <a href="#" data-section="practice1">Практика 1</a>
+            <a href="#" data-section="practice2">Практика 2</a>
+            <a href="#" data-section="practice3">Практика 3</a>            
             <a href="#">Практика 4</a>
             <a href="#">Практика 5</a>
             <a href="#">Практика 6</a>
@@ -24,7 +24,7 @@
     </header>
     <main>
         <!-- Секция с задачами -->
-        <div class="content">
+        <div id="practice1" class="content">
             <h2>Задачи практики №1</h2>
 
             <!-- Задача 1 -->
@@ -120,7 +120,7 @@
             <div class="task">
                 <div class="taskContainer">
                     <div class="titleBlock">№ 6</div>
-                    <div class="smallFont titleBlock">&#9998; ЛЕГКО</div>                    
+                    <div class="smallFont titleBlock">&#9998; СРЕДНЕ</div>                    
                 </div>
                 <div class="taskContainer">
                     <div class="img task6Pic"></div>
@@ -314,17 +314,246 @@
                 </div>            
             </div>
         </div>
+
+
+        <!-- Секция с задачами для Практики 2 -->
+        <div id="practice2" class="content">
+            <h2>Задачи практики №2</h2>
+            <!-- Пример задачи для Практики 2 -->
+            <div class="task">
+                <div class="taskContainer">
+                    <div class="titleBlock">№ 1</div>
+                    <div class="smallFont titleBlock">&#9998; ЛЕГКО</div>                    
+                </div>
+                <div class="taskContainer">
+                    <div class="img task1Pic"></div>
+                    <div>
+                        <h3>Задача 1 для Практики 2</h3>
+                        <p>Описание задачи для Практики 2.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Секция с задачами для Практики 3 -->
+        <div id="practice3" class="content">
+            <h2>Задачи практики №3</h2>
+            <!-- Задача 1 для Практики 3 -->
+            <div class="task">
+                <div class="taskContainer">
+                    <div class="titleBlock">№ 1</div>
+                    <div class="smallFont titleBlock">&#9998; ЛЕГКО</div>                    
+                </div>
+                <div class="taskContainer">
+                    <div class="img task1_3Pic"></div>
+                    <div>
+                        <h3>Определение секций для переменных</h3>
+                        <p>Изучите следующий код и определите, в каких секциях ELF-файла на диске будут находиться указанные переменные, функции и данные.</p>
+<pre style="background-color: #eaeaea; padding: 15px; border-radius: 5px; overflow-x: auto;">
+#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+
+// Глобальные переменные
+int global_var = 42; 
+int uninitialized_global_var; 
+
+// Статическая переменная
+static int static_var = 10;
+
+// Структура
+struct Point {
+    int x;
+    int y;
+};
+
+struct Point global_point = {1, 2};
+
+// Функция
+void print_message() {
+    static int static_local_var = 5;
+    int local_var = 3;
+    printf("Message from function!\n");
+}
+
+int main() {
+    int auto_var = 100;
+    int *dynamic_var = malloc(4);
+    if (dynamic_var) {
+        *dynamic_var = 200;
+    }
+
+    struct Point stack_point = {3, 4};
+
+    print_message();
+
+    free(dynamic_var); 
+
+    return 0;
+}
+</pre>
+                        <p><strong>Вопросы для анализа:</strong></p>
+                        <ol>
+                            <li>В какой секции ELF-файла будет находиться <code>global_var</code>?</li>
+                            <li>В какой секции ELF-файла будет храниться <code>uninitialized_global_var</code>?</li>
+                            <li>Где находится <code>static_var</code>?</li>
+                            <li>Где будет размещена <code>global_point</code>?</li>
+                            <li>Где будут расположены:
+                                <ul>
+                                    <li><code>local_var</code> из функции <code>print_message</code>?</li>
+                                    <li><code>static_local_var</code> из той же функции?</li>
+                                </ul>
+                            </li>
+                            <li>Где будет храниться <code>auto_var</code> из функции <code>main</code>?</li>
+                            <li>Где будет выделена память для <code>dynamic_var</code>?</li>
+                            <li>Где будет создана <code>stack_point</code>?</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Сегменты памяти ELF файла для Практики 2 -->
+            <div class="task">
+                <div class="taskContainer">
+                    <div class="smallFont titleBlock">&#9998; Схема сегментов памяти запускаемого объкетного файла</div>                    
+                </div>
+                <div class="img segments"></div>
+            </div>
+
+            <!-- Задача 2 для Практики 3 -->
+            <div class="task">
+                <div class="taskContainer">
+                    <div class="titleBlock">№ 2</div>
+                    <div class="smallFont titleBlock">&#9998; ЛЕГКО</div>                    
+                </div>
+                <div class="taskContainer">
+                    <div class="img task2_3Pic"></div>
+                    <div>
+                        <h3>Определение сегментов памяти для переменных</h3>
+                        <p>Изучите следующий код и определите, в каких сегментах ELF-файла будут находиться указанные переменные, функции и данные.</p>
+<pre style="background-color: #eaeaea; padding: 15px; border-radius: 5px; overflow-x: auto;">
+#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+
+// Глобальные переменные
+int global_var = 42; 
+int uninitialized_global_var; 
+
+// Статическая переменная
+static int static_var = 10;
+
+// Структура
+struct Point {
+int x;
+int y;
+};
+
+struct Point global_point = {1, 2};
+
+// Функция
+void print_message() {
+static int static_local_var = 5;
+int local_var = 3;
+printf("Message from function!\n");
+}
+
+int main() {
+int auto_var = 100;
+int *dynamic_var = malloc(4);
+if (dynamic_var) {
+    *dynamic_var = 200;
+}
+
+struct Point stack_point = {3, 4};
+
+print_message();
+
+free(dynamic_var); 
+
+return 0;
+}
+</pre>
+                        <p><strong>Вопросы для анализа:</strong></p>
+                        <ol>
+                            <li>В каком сегменте ELF-файла будет находиться <code>global_var</code>?</li>
+                            <li>В каком сегменте ELF-файла будет храниться <code>uninitialized_global_var</code>?</li>
+                            <li>В каком сегменте находится <code>static_var</code>?</li>
+                            <li>Где будет размещена <code>global_point</code>?</li>
+                            <li>Где будут расположены:
+                                <ul>
+                                    <li><code>local_var</code> из функции <code>print_message</code>?</li>
+                                    <li><code>static_local_var</code> из той же функции?</li>
+                                </ul>
+                            </li>
+                            <li>Где будет храниться <code>auto_var</code> из функции <code>main</code>?</li>
+                            <li>Где будет выделена память для <code>dynamic_var</code>?</li>
+                            <li>Где будет создана <code>stack_point</code>?</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Задача 3 для Практики 3 -->
+            <div class="task">
+                <div class="taskContainer">
+                    <div class="titleBlock">№ 1</div>
+                    <div class="smallFont titleBlock">&#9998; ЛЕГКО</div>                    
+                </div>
+                <div class="taskContainer">
+                    <div class="img task1Pic"></div>
+                    <div>
+                        <h3>Создание многофайлового проекта для космического корабля</h3>
+
+                        <p> Вы работаете над программой управления космическим кораблем. Необходимо разделить функционал на несколько файлов:
+                            <ol>
+                                <li>Файл navigation.c содержит функцию <code>calculate_distance(float speed, float time)</code> для расчета расстояния.</li>
+                                <li>Файл <code>fuel.c</code> содержит функцию <code>check_fuel(int fuel_level)</code> для проверки уровня топлива.</li>
+                                <li>Файл <code>main.c</code> — главный файл программы, который использует функции из <code>navigation.c</code> и <code>fuel.c.</code></li>
+                            </ol>                            
+                            Требования:
+                            <ul>
+                                <li>Создайте три файла: <code>navigation.c</code>, <code>fuel.c</code> и <code>main.c</code>.</li>
+                                <li>Напишите заголовочный файл <code>ship.h</code>, в котором объявите прототипы функций.</li>
+                                <li>В файле <code>main.c</code> запросите у пользователя скорость (<code>float</code>) и время (<code>float</code>), затем выведите рассчитанное расстояние.</li>
+                                <li>Проверьте уровень топлива (если меньше 10%, выведите предупреждение).</li>
+                                <li>Скомпилируйте проект с помощью  <code>GCC</code>.</li>
+                                Дополнительное задание:
+                                <li>Используйте команду  <code>nm</code> для просмотра символов в объектных файлах до связывания и сравните их с символами в исполняемом файле после связывания.</li>
+                            </ul>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+
+        </div> 
     </main>
     <footer>
         made with ♥️ by safaroff
     </footer>
-
-    
     <script>
-        const button = document.getElementById('practice1-button');
-        
-        button.addEventListener("click", function() {
-            button.textContent = "Переменные";
+        // Получаем все ссылки в навигации
+        const navLinks = document.querySelectorAll('.navbar a');
+        // Получаем все секции с задачами
+        const sections = document.querySelectorAll('.content');
+
+        // Обработчик клика по ссылкам
+        navLinks.forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault(); // Отменяем стандартное поведение ссылки
+
+                // Убираем класс active у всех секций
+                sections.forEach(section => {
+                    section.classList.remove('active');
+                });
+
+                // Получаем data-атрибут с именем секции
+                const sectionId = link.getAttribute('data-section');
+                // Находим нужную секцию и добавляем класс active
+                const targetSection = document.getElementById(sectionId);
+                if (targetSection) {
+                    targetSection.classList.add('active');
+                }
+            });
         });
     </script>
 </body>
