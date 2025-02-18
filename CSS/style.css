@@ -235,3 +235,8 @@ footer {
 .content.active {
     display: block;
 }
+
+.nonStyleOl {
+    list-style-type: none;
+    padding-left: 30;
+}
